@@ -30,7 +30,7 @@ for line in fhandle:
         cur.execute('INSERT INTO Counts (org, count) VALUES (?,1) ',(domain,))
     else:
         cur.execute('UPDATE Counts SET count=count+1 WHERE org=?',(domain,))
-    #commit on orgdb.sqlite file...took time on my pc :(
+    #commit on orgdb.sqlite file...took time on my pc when I used a much larger file:(
     con.commit()
     
 #optional...display in python terminal in descending order of count
